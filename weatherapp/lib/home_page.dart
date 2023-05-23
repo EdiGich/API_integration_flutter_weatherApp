@@ -52,14 +52,19 @@ class MyHomePage extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Text(
+                      SizedBox(
+                        height: 19,
+                      ),
+                      Text(                        
                         '${data?.cityName}',
-                        style: TextStyle(color: Colors.white.withOpacity(0.9), 
-                        fontSize: 35,
+                        style: TextStyle(
+                        color: Colors.white.withOpacity(0.9), 
+                        fontSize: 45,
                         fontFamily:'MavenPro'),
+                        
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
                       Text(
                         dateFormat,
@@ -89,7 +94,7 @@ class MyHomePage extends StatelessWidget {
                         fontFamily:'Hubballi'),
                       ),
                         SizedBox(
-                          height: 5,
+                          height: 20,
                         ),
                           Text(
                         '${data?.temp}°',
@@ -100,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                         fontFamily:'Hubballi'),
                       ),
                       SizedBox(
-                        height:9,
+                        height:80,
                       ),
                       //The symbols
                       Row(
