@@ -5,23 +5,22 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/widgets/ImagesWidget.dart';
 
-class FavPage  extends StatelessWidget{
+class FavPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(children:[
+        child: Column(children: [
           //Custom App Bar
           Container(
-            margin:  EdgeInsets.only(top:5),
-            padding:  EdgeInsets.symmetric(horizontal: 20),
+            margin: EdgeInsets.only(top: 5),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             height: 60,
             child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
                   },
                   child: Icon(
@@ -37,13 +36,13 @@ class FavPage  extends StatelessWidget{
                   ),
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushNamed(context, "favPage");
                   },
                   child: Icon(
                     Icons.favorite,
-                    size:30,
-                    color:Colors.red,
+                    size: 30,
+                    color: Colors.red,
                   ),
                 ),
               ],
@@ -59,7 +58,8 @@ class FavPage  extends StatelessWidget{
           ),
           Flexible(
             flex: 1,
-            child: ImagesWidget(),),
+            child: ImagesWidget(),
+          ),
         ]),
       ),
     );

@@ -6,14 +6,13 @@ import 'package:wallpaper_app/pages/FavPage.dart';
 import 'package:wallpaper_app/pages/HomePage.dart';
 import 'package:wallpaper_app/pages/ImagePage.dart';
 
-
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
-  
+
   @override
   Widget build(BuildContext context) {
     // implement build
@@ -21,9 +20,9 @@ class MyApp extends StatefulWidget {
   }
 }
 
-class _MyAppState extends State<MyApp>{
+class _MyAppState extends State<MyApp> {
   @override
-  void initState(){
+  void initState() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     super.initState();
   }
@@ -31,16 +30,14 @@ class _MyAppState extends State<MyApp>{
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          ),
-          debugShowCheckedModeBanner: false,
-          routes: {
-            "/": (context) =>  HomePage(),
-            "imagePage": (context) => ImagePage(),
-            "favPage": (context) => FavPage(),
-          },
-      );  
-    
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        "/": (context) => HomePage(),
+        "imagePage": (context) => ImagePage(),
+        "favPage": (context) => FavPage(),
+      },
+    );
   }
 }
-

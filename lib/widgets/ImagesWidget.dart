@@ -14,31 +14,31 @@ class ImagesWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: GridView.count(
-        crossAxisCount:2,
-        shrinkWrap:true,
-        mainAxisSpacing:10,
-        crossAxisSpacing:10,
-        childAspectRatio:0.8,
-        children:[
-          for(int i =1; i<9; i++)
-          GestureDetector(
-            onTap: (){
+        crossAxisCount: 2,
+        shrinkWrap: true,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        childAspectRatio: 0.8,
+        children: [
+          for (int i = 1; i < 9; i++)
+            GestureDetector(
+              onTap: () {
                 context.pushTransparentRoute(ImagePage());
-            },
-            child: Container(
-              decoration:BoxDecoration(
-                color:Colors.grey,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child:Hero(
-                tag:"$i",
-                child:Image.asset(
-                  "images/1.jpg",
-                  fit:BoxFit.cover,
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Hero(
+                  tag: "$i",
+                  child: Image.asset(
+                    "images/1.jpg",
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
-          ),
         ],
       ),
     );
